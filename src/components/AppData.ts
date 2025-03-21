@@ -1,9 +1,8 @@
 import _ from "lodash";
 import {dayjs, formatNumber} from "../utils/utils";
 
-import { Model } from "./base/Model";
+import {Model} from "./base/Model";
 import {FormErrors, IAppState, IBasketItem, ILot, IOrder, IOrderForm, LotStatus} from "../types";
-
 
 export type CatalogChangeEvent = {
     catalog: LotItem[]
@@ -55,7 +54,7 @@ export class LotItem extends Model<ILot> {
             case "wait":
                 return `Откроется ${dayjs(this.datetime).format('D MMMM [в] HH:mm')}`
             default:
-                return this.status
+                return this.status;
         }
     }
 

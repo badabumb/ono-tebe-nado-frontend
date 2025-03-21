@@ -1,10 +1,9 @@
-import { ensureAllElements } from "../../utils/utils";
-import { Component } from "../base/Component";
+import {Component} from "../base/Component";
+import {ensureAllElements} from "../../utils/utils";
 
 export type TabState = {
     selected: string
 };
-
 export type TabActions = {
     onClick: (tab: string) => void
 }
@@ -28,6 +27,6 @@ export class Tabs extends Component<TabState> {
         this._buttons.forEach(button => {
             this.toggleClass(button, 'tabs__item_active', button.name === name);
             this.setDisabled(button, button.name === name)
-        })
+        });
     }
 }

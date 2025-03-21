@@ -1,12 +1,12 @@
-import { ensureElement } from "../../utils/utils";
-import { Component } from "../base/Component";
+import {Component} from "../base/Component";
+import {ensureElement} from "../../utils/utils";
 
 interface ISuccess {
     total: number;
 }
 
 interface ISuccessActions {
-    onclick: () => void;
+    onClick: () => void;
 }
 
 export class Success extends Component<ISuccess> {
@@ -17,8 +17,8 @@ export class Success extends Component<ISuccess> {
 
         this._close = ensureElement<HTMLElement>('.state__action', this.container);
 
-        if (actions?.onclick) {
-            this._close.addEventListener('click', actions.onclick);
+        if (actions?.onClick) {
+            this._close.addEventListener('click', actions.onClick);
         }
     }
 }
